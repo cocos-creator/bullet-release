@@ -3,4 +3,5 @@
 /scripts
 /src
 /test
+/*/node_modules
 BULLET.d.ts
