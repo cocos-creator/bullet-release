@@ -1,1 +1,6 @@
-/temp/*
+/temp
+/extenal
+/scripts
+/src
+/test
+BULLET.d.ts
