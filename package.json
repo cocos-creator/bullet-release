@@ -2,13 +2,17 @@
   "name": "@cocos/bullet",
   "version": "1.0.0",
   "description": "",
-  "main": "builds/bullet.asm.umd.min.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "bullet.asm.umd.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:umd":"babel --plugins @babel/plugin-transform-modules-umd bullet.asm.min.js -o bullet.asm.umd.min.js"
   },
   "author": "jiaxin.lai",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-transform-modules-umd": "^7.8.3",
+    "@babel/preset-env": "^7.8.7"
+  }
 }

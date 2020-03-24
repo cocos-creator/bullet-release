@@ -1,7 +1,2 @@
-/temp
-/extenal
-/scripts
-/src
-/test
-/*/node_modules
-BULLET.d.ts
+
+/node_modules
