@@ -5,11 +5,11 @@
   "main": "bullet.asm.umd.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:umd":"babel --plugins @babel/plugin-transform-modules-umd bullet.asm.min.js -o bullet.asm.umd.min.js"
+    "build:umd": "babel --plugins @babel/plugin-transform-modules-umd bullet.asm.min.js -o bullet.asm.umd.min.js"
   },
   "author": "jiaxin.lai",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.7",
     "@babel/plugin-transform-modules-umd": "^7.8.3",
