@@ -2,10 +2,10 @@
   "name": "@cocos/bullet",
   "version": "1.0.0",
   "description": "",
-  "main": "bullet.asm.umd.min.js",
+  "main": "bullet.cocos.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:umd": "babel --plugins @babel/plugin-transform-modules-umd bullet.asm.min.js -o bullet.asm.umd.min.js"
+    "build": "node port.js && babel --plugins @babel/plugin-transform-modules-umd bullet.tmp.js -o bullet.cocos.js"
   },
   "author": "jiaxin.lai",
   "license": "ISC",
