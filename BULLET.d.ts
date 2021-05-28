@@ -1,19 +1,19 @@
 // tslint:disable
-declare function BULLET (): Promise<void>;
+declare function Bullet(): Promise<void>;
 
-declare namespace BULLET {
+declare namespace Bullet {
 
     //btVector3
-    function btVector3_create (x: number, y: number, z: number): number;
-    function btVector3_length (ptr: number, ): number;
-    function btVector3_x (ptr: number, ): number;
-    function btVector3_y (ptr: number, ): number;
-    function btVector3_z (ptr: number, ): number;
-    function btVector3_setX (ptr: number, x: number): void;
-    function btVector3_setY (ptr: number, y: number): void;
-    function btVector3_setZ (ptr: number, z: number): void;
-    function btVector3_setValue (ptr: number, x: number, y: number, z: number): void;
-    function btVector3_normalize (ptr: number, ): void;
+    function btVector3_create(x: number, y: number, z: number): number;
+    function btVector3_length(ptr: number,): number;
+    function btVector3_x(ptr: number,): number;
+    function btVector3_y(ptr: number,): number;
+    function btVector3_z(ptr: number,): number;
+    function btVector3_setX(ptr: number, x: number): void;
+    function btVector3_setY(ptr: number, y: number): void;
+    function btVector3_setZ(ptr: number, z: number): void;
+    function btVector3_setValue(ptr: number, x: number, y: number, z: number): void;
+    function btVector3_normalize(ptr: number,): void;
     // /**[Value] */
     // function btVector3_rotate (ptr: number, wAxis: btVector3, angle: number): btVector3;
     // function btVector3_dot (ptr: number, v: btVector3): number;
@@ -22,24 +22,24 @@ declare namespace BULLET {
     // function btVector3_op_sub (ptr: number, v: btVector3): btVector3;
 
     //btVector4
-    function btVector4_create (x: number, y: number, z: number, w: number): number;
-    function btVector4_w (ptr: number): number;
-    function setValue (x: number, y: number, z: number): void;
-    function setValue (x: number, y: number, z: number, w: number): void;
+    function btVector4_create(x: number, y: number, z: number, w: number): number;
+    function btVector4_w(ptr: number): number;
+    function setValue(x: number, y: number, z: number): void;
+    function setValue(x: number, y: number, z: number, w: number): void;
 
     /**
      * btQuaternion
      */
 
-    function btQuaternion_x (): number;
-    function btQuaternion_y (): number;
-    function btQuaternion_z (): number;
-    function btQuaternion_w (): number;
-    function btQuaternion_setX (x: number): void;
-    function btQuaternion_setY (y: number): void;
-    function btQuaternion_setZ (z: number): void;
-    function btQuaternion_setW (w: number): void;
-    function btQuaternion_setValue (x: number, y: number, z: number, w: number): void;
+    function btQuaternion_x(): number;
+    function btQuaternion_y(): number;
+    function btQuaternion_z(): number;
+    function btQuaternion_w(): number;
+    function btQuaternion_setX(x: number): void;
+    function btQuaternion_setY(y: number): void;
+    function btQuaternion_setZ(z: number): void;
+    function btQuaternion_setW(w: number): void;
+    function btQuaternion_setValue(x: number, y: number, z: number, w: number): void;
     // function btQuaternion_setEulerZYX (z: number, y: number, x: number): void;
     // function btQuaternion_setRotation (axis: btVector3, angle: number): void;
     // function btQuaternion_normalize (): void;
@@ -66,7 +66,7 @@ declare namespace BULLET {
      * btMatrix3x3 
      */
 
-    function btMatrix3x3_setEulerZYX (ex: number, ey: number, ez: number): void;
+    function btMatrix3x3_setEulerZYX(ex: number, ey: number, ez: number): void;
     // function btMatrix3x3_getRotation (q: btQuaternion): void;
     // function btMatrix3x3_getRow (y: number): btVector3;
 
@@ -74,8 +74,8 @@ declare namespace BULLET {
      * btTransform
      */
 
-    function btTransform_create (): number;
-    function btTransform_setIdentity (): void;
+    function btTransform_create(): number;
+    function btTransform_setIdentity(): void;
     // function btTransform_setOrigin (origin: btVector3): void;
     // function btTransform_setRotation (rotation: btQuaternion): void;
     // function btTransform_getOrigin (): btVector3;
@@ -101,32 +101,32 @@ declare namespace BULLET {
      * btCollisionObject
      */
 
-    function btCollisionObject_create (): number;
+    function btCollisionObject_create(): number;
     // function btCollisionObject_setAnisotropicFriction(anisotropicFriction: btVector3, frictionMode: number): void;
     // function btCollisionObject_getCollisionShape (): btCollisionShape;
-    function btCollisionObject_setContactProcessingThreshold (contactProcessingThreshold: number): void;
-    function btCollisionObject_getActivationState (): number;
-    function btCollisionObject_setActivationState (newState: number): void;
-    function btCollisionObject_forceActivationState (newState: number): void;
-    function btCollisionObject_activate (forceActivation?: boolean): void;
-    function btCollisionObject_isActive (): boolean;
-    function btCollisionObject_isKinematicObject (): boolean;
-    function btCollisionObject_isStaticObject (): boolean;
-    function btCollisionObject_isStaticOrKinematicObject (): boolean;
-    function btCollisionObject_setRestitution (rest: number): void;
-    function btCollisionObject_setFriction (frict: number): void;
-    function btCollisionObject_setRollingFriction (frict: number): void;
+    function btCollisionObject_setContactProcessingThreshold(contactProcessingThreshold: number): void;
+    function btCollisionObject_getActivationState(): number;
+    function btCollisionObject_setActivationState(newState: number): void;
+    function btCollisionObject_forceActivationState(newState: number): void;
+    function btCollisionObject_activate(forceActivation?: boolean): void;
+    function btCollisionObject_isActive(): boolean;
+    function btCollisionObject_isKinematicObject(): boolean;
+    function btCollisionObject_isStaticObject(): boolean;
+    function btCollisionObject_isStaticOrKinematicObject(): boolean;
+    function btCollisionObject_setRestitution(rest: number): void;
+    function btCollisionObject_setFriction(frict: number): void;
+    function btCollisionObject_setRollingFriction(frict: number): void;
     // function btCollisionObject_getWorldTransform(): btTransform;
-    function btCollisionObject_getCollisionFlags (): number;
-    function btCollisionObject_setCollisionFlags (flags: number): void;
+    function btCollisionObject_getCollisionFlags(): number;
+    function btCollisionObject_setCollisionFlags(flags: number): void;
     // function btCollisionObject_setWorldTransform(worldTrans: btTransform): void;
     // function btCollisionObject_setCollisionShape (collisionShape: btCollisionShape): void;
-    function btCollisionObject_setCcdMotionThreshold (ccdMotionThreshold: number): void;
-    function btCollisionObject_setCcdSweptSphereRadius (radius: number): void;
-    function btCollisionObject_getUserIndex (): number;
-    function btCollisionObject_setUserIndex (index: number): void;
-    function btCollisionObject_getUserPointer (): number;
-    function btCollisionObject_setUserPointer (userPointer: number): void;
+    function btCollisionObject_setCcdMotionThreshold(ccdMotionThreshold: number): void;
+    function btCollisionObject_setCcdSweptSphereRadius(radius: number): void;
+    function btCollisionObject_getUserIndex(): number;
+    function btCollisionObject_setUserIndex(index: number): void;
+    function btCollisionObject_getUserPointer(): number;
+    function btCollisionObject_setUserPointer(userPointer: number): void;
     // function btCollisionObject_getBroadphaseHandle (): btBroadphaseProxy;
 
     // class RayResultCallback {
@@ -1335,5 +1335,5 @@ declare namespace BULLET {
 }
 
 declare module '@cocos/bullet' {
-    export = BULLET;
+    export = Bullet;
 }

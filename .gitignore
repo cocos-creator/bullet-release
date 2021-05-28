@@ -1,3 +1,4 @@
 
-/node_modules
-/bullet.tmp.js
+node_modules
+bullet.temp.*
+bullet.O*.*
