@@ -2,28 +2,29 @@
 declare function instantiate(env: any, buffer: ArrayBuffer): Bullet.instance;
 
 declare namespace Bullet {
+    type ptr = number;
     interface instance {
         //btVector3
-        btVector3_create(x: number, y: number, z: number): number;
-        btVector3_length(ptr: number,): number;
-        btVector3_x(ptr: number,): number;
-        btVector3_y(ptr: number,): number;
-        btVector3_z(ptr: number,): number;
-        btVector3_setX(ptr: number, x: number): void;
-        btVector3_setY(ptr: number, y: number): void;
-        btVector3_setZ(ptr: number, z: number): void;
-        btVector3_setValue(ptr: number, x: number, y: number, z: number): void;
-        btVector3_normalize(ptr: number,): void;
+        btVector3_create(x: number, y: number, z: number): ptr;
+        btVector3_length(p: ptr,): number;
+        btVector3_x(p: ptr,): number;
+        btVector3_y(p: ptr,): number;
+        btVector3_z(p: ptr,): number;
+        btVector3_setX(p: ptr, x: number): void;
+        btVector3_setY(p: ptr, y: number): void;
+        btVector3_setZ(p: ptr, z: number): void;
+        btVector3_setValue(p: ptr, x: number, y: number, z: number): void;
+        btVector3_normalize(p: ptr,): void;
         // /**[Value] */
-        // btVector3_rotate (ptr: number, wAxis: btVector3, angle: number): btVector3;
-        // btVector3_dot (ptr: number, v: btVector3): number;
-        // btVector3_op_mul (ptr: number, x: number): btVector3;
-        // btVector3_op_add (ptr: number, v: btVector3): btVector3;
-        // btVector3_op_sub (ptr: number, v: btVector3): btVector3;
+        // btVector3_rotate (p: ptr, wAxis: btVector3, angle: number): btVector3;
+        // btVector3_dot (p: ptr, v: btVector3): number;
+        // btVector3_op_mul (p: ptr, x: number): btVector3;
+        // btVector3_op_add (p: ptr, v: btVector3): btVector3;
+        // btVector3_op_sub (p: ptr, v: btVector3): btVector3;
 
         //btVector4
         btVector4_create(x: number, y: number, z: number, w: number): number;
-        btVector4_w(ptr: number): number;
+        btVector4_w(p: ptr): number;
         setValue(x: number, y: number, z: number): void;
         setValue(x: number, y: number, z: number, w: number): void;
 
@@ -31,14 +32,14 @@ declare namespace Bullet {
          * btQuaternion
          */
 
-        btQuaternion_x(): number;
-        btQuaternion_y(): number;
-        btQuaternion_z(): number;
-        btQuaternion_w(): number;
-        btQuaternion_setX(x: number): void;
-        btQuaternion_setY(y: number): void;
-        btQuaternion_setZ(z: number): void;
-        btQuaternion_setW(w: number): void;
+        btQuaternion_x(p: ptr): number;
+        btQuaternion_y(p: ptr): number;
+        btQuaternion_z(p: ptr): number;
+        btQuaternion_w(p: ptr): number;
+        btQuaternion_setX(p: ptr, x: number): void;
+        btQuaternion_setY(p: ptr, y: number): void;
+        btQuaternion_setZ(p: ptr, z: number): void;
+        btQuaternion_setW(p: ptr, w: number): void;
         btQuaternion_setValue(x: number, y: number, z: number, w: number): void;
         // btQuaternion_setEulerZYX (z: number, y: number, x: number): void;
         // btQuaternion_setRotation (axis: btVector3, angle: number): void;
@@ -127,6 +128,11 @@ declare namespace Bullet {
         btCollisionObject_setUserIndex(index: number): void;
         btCollisionObject_getUserPointer(): number;
         btCollisionObject_setUserPointer(userPointer: number): void;
+
+        // shape
+        btEmptyShape_create(): ptr;
+        btBoxShape_create(p: ptr): ptr;
+        btSphereShape_create(radius: number): ptr;
     }
 }
 
