@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "minify": "uglifyjs bullet.asm.js -c -m -o bullet.asm.min.js",
-    "build": "npm run minify && node port.js && babel --plugins @babel/plugin-transform-modules-umd bullet.temp.js -o bullet.cocos.js"
+    "build": "npm run minify && node port.js && babel bullet.temp.js -o bullet.cocos.js"
   },
   "author": "jiaxin.lai",
   "license": "ISC",
